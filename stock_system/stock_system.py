@@ -1,5 +1,4 @@
 import sqlite3 as sql
-import os
 from datetime import date
 
 file = "stock.db"
