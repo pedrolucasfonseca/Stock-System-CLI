@@ -14,6 +14,10 @@ class Product:
     
     def __str__(self):
         return f"{self.name}\nQuantity:{self.quantity} | Price: {self.price}\nCategory: {self.category}"
+    
+    
+    def is_low_stock(self):
+        return self.quantity < 10
 
     
 def create_connection():
@@ -85,7 +89,10 @@ def list_products():
             print("No products registered yet.")
 
         for row in rows:
+            product = Product(row[1], row[2], row[3], row[4])
             print(f"ID: {row[0]} | Name: {row[1]} | Quantity: {row[2]} | Price: {row[3]} | Category: {row[4]} | Created in: {row[5]}")
+            if product.is_low_stock:
+                print("Low stock.")
 
     except sql.Error as e:
         print(f"Error: {e}")
