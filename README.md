@@ -25,13 +25,12 @@ python stock_system.py
 
 ```bash
 stock_system/
-├── stock_system.py   # Main application
-└── stock.db          # SQLite database (auto-created on first run)
+├── stock_system.py # Main application
+└── stock.db # SQLite database (auto-created on first run)
 ```
 
-## What I learned
+## Learned
 
 - Object-oriented programming with classes in Python
 - SQLite database operations (CREATE, INSERT, SELECT, UPDATE, DELETE)
-- Error handling with try/except/finally
 - Separating concerns between data and business logic
